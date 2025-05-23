@@ -1546,6 +1546,12 @@ letter-spacing: 0.4px;
   }
 }
 @media all and (max-width:968px){
+    .nexus-header-wrapper
+{
+  
+  padding: 0px 24px;
+
+}
   .nexus-header-banner
   {
     padding-left: 24px;
