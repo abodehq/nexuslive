@@ -1523,6 +1523,10 @@ font-weight: 400;
 letter-spacing: 0.4px;
 }
 @media all and (max-width:1100px){
+  .nexus-projects-wrapper-large
+  {
+    margin:0 24px;
+  }
   .nexus-projects-row
   {
     padding:0px 24px;
