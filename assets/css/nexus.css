@@ -1546,7 +1546,15 @@ letter-spacing: 0.4px;
   }
 }
 @media all and (max-width:968px){
-    .nexus-header-wrapper
+  .nexsus-projects-container
+  {
+    padding: 0px 24px;
+  }
+  .nexus-projects-card-large
+  {
+    min-width: 100%;
+  }
+  .nexus-header-wrapper
 {
   
   padding: 0px 24px;
