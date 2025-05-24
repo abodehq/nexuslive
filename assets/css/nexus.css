@@ -1480,7 +1480,18 @@ letter-spacing: 0.36px;
     align-items: flex-start;
     gap: 16px;
     flex: 1 0 0;
+    border-top-left-radius:32px ;
+    border-top-right-radius: 32px;
+  
+    background-color: #fff;
 
+    
+}
+.projects-home-lg
+{
+  border-top-left-radius:16px ;
+  border-top-right-radius: 16px;
+  margin-top: -2px;
 
 }
 .footer-menu-list
