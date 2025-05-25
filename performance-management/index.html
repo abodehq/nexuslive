@@ -123,7 +123,7 @@
                         <div class="nexus-statics-content1">
                      <img src="/assets/img/stat1.svg" class="stat-logo" >
                         <div class="nexus-statics-content-wrapper">
-                            <div class="nexus-statics-content-title">40+</div>
+                            <div class="nexus-statics-content-title counter" data-target="40">0</div>
                               <div class="nexus-statics-content-slogan">Strategic Projects</div>
                         </div>
                     
@@ -133,7 +133,7 @@
                            <div class="nexus-statics-content2">
                      <img src="/assets/img/stat2.svg" class="stat-logo" >
                         <div class="nexus-statics-content-wrapper">
-                            <div class="nexus-statics-content-title">500+</div>
+                            <div class="nexus-statics-content-title counter" data-target="500">0</div>
                               <div class="nexus-statics-content-slogan">Consultants & SMEs</div>
                         </div>
                     
@@ -143,7 +143,7 @@
                          <div class="nexus-statics-content3">
                      <img src="/assets/img/stat3.svg" class="stat-logo" >
                         <div class="nexus-statics-content-wrapper">
-                            <div class="nexus-statics-content-title">20+</div>
+                            <div class="nexus-statics-content-title counter"  data-target="20">0</div>
                               <div class="nexus-statics-content-slogan">Clients in the GCC & Levant</div>
                         </div>
                     
@@ -357,6 +357,44 @@
 
     </div>
 </div>
+
+
+  <script>
+    function animateCounter(el, target, duration = 2000) {
+      let start = 0;
+      const startTime = performance.now();
+
+      function update(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const currentValue = Math.floor(progress * target);
+        el.textContent = currentValue +"+";
+
+        if (progress < 1) {
+          requestAnimationFrame(update);
+        }
+      }
+
+      requestAnimationFrame(update);
+    }
+
+    const counters = document.querySelectorAll(".counter");
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !entry.target.classList.contains("animated")) {
+          const el = entry.target;
+          const target = +el.getAttribute("data-target");
+          animateCounter(el, target);
+          el.classList.add("animated");
+        }
+      });
+    }, {
+      threshold: 0.6
+    });
+
+    counters.forEach(counter => observer.observe(counter));
+  </script>
  
 
 

@@ -1211,6 +1211,11 @@ align-self: stretch;
   font-weight: 400;
   line-height: 24px; /* 133.333% */
   letter-spacing: 0.36px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .nexus-projects-card-content-level
 {
@@ -1363,6 +1368,10 @@ text-transform: capitalize;
 {
   display: none;
 }
+.team-page .page-title
+{
+  display: none;
+}
 .nexus-h-projects
 {
   display: flex;
@@ -1500,6 +1509,7 @@ letter-spacing: 0.36px;
   margin-left: 0px;
 }
 .nexus-m-t-container{
+  
   display: flex;
     max-width: 1440px;
     padding: 70px 70px;
@@ -1511,12 +1521,52 @@ letter-spacing: 0.36px;
     align-self: stretch;
     width: 100%;
 }
+.nexus-mt-statics-container{
+  display: flex;
+  justify-content: center;
+}
+.nexus-mt-statics{
+  display: flex;
+    max-width: 1440px;
+    padding: 70px 70px;
+    padding-bottom: 46px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+    align-self: stretch;
+    width: 100%;
+}
+.nexus-m-t-team-container 
+{
+  display: flex;
+      max-width: 1440px;
+      padding: 70px 0px;
+      padding-bottom: 46px;
+       flex-direction: row; 
+      justify-content: space-between;
+      align-items: center;
+      gap: 128px;
+      align-self: self-end;
+      width: 100%;
+}
+.nexus-m-t-all-teams a
+{
+  color: #475467;
+
+text-align: center;
+font-size: 18px;
+font-weight: 600;
+line-height: 27.9px; 
+}
 .nexus-m-t-row,.nexus-m-t-teams
 {
   justify-content:flex-start !important;
   margin-bottom: 48px;
 }
-
+.nexus-m-t-row
+{
+  padding:0px;
+}
 .nexus-m-t-title
 {
   color: #000;
@@ -1533,7 +1583,99 @@ font-size: 20px;
 font-weight: 400;
 letter-spacing: 0.4px;
 }
+.nexus-network-m
+{
+  display: none;
+}
 @media all and (max-width:1100px){
+  .nexus-network
+  {
+    display: none;
+  }
+  .nexus-network-m
+  {
+    margin:48px 0px;
+    display: flex;
+    justify-content: center;
+  }
+  .nexus-network-m-container
+  {
+    display: flex;
+
+    padding: 0px 24px;
+    padding-bottom: 46px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+    align-self: stretch;
+    width: 100%;
+  }
+  .nexus-network-m-item
+  {
+    display: flex;
+    align-items: center;
+
+  }
+  .nexus-network-m-icon
+  {
+    width:65px;
+    height:auto;
+  }
+  .nexus-network-m-item-title
+  {
+    color: #000;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+  .nexus-network-m-item-desc
+  {
+    color: #85878A;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .nexus-network-m-item-content
+  {
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    background: #FFF;
+    display: flex;
+    width: 100%;
+    padding: 12px;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+  .nexus-m-t-title
+{
+  font-size: 24px;
+}
+.nexus-m-t-title-desc
+{
+  font-size: 16px;
+}
+.nexus-m-t-team-container
+{
+  flex-direction: column;
+}
+.nexus-m-t-team-container
+{
+  gap: 12px;
+  padding: 0px 0px;
+  align-items: flex-end;
+}
+  .nexus-mt-statics
+  {
+    padding:0px 24px;
+    margin-top: 48px;
+    margin-bottom: 48px;
+  }
+  .nexus-projects-large
+  {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
   .nexus-projects-wrapper-large
   {
     margin:0 24px;
@@ -1583,6 +1725,8 @@ letter-spacing: 0.4px;
   .nexus-lg-tm-img-corner
   {
     width:250px;
+    position: absolute;
+    top: 167px;
   }
   .nexus-tmb-contact-content {
     padding-bottom: 150px;
